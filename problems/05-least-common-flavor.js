@@ -15,7 +15,23 @@ Least common flavor:
 */
 
 function leastCommonFlavor(candyBag) {
+    let candies = Object.keys(candyBag);
+    let smallestNum = 999999999;
+    let leastCommon = candies[0];
 
+    if (candies.length === 0) return null;
+
+    for(let i = 0; i < candies.length; i++) {
+        let candy = candies[i];
+        let num = candyBag[candy];
+
+        if (num < smallestNum) {
+            leastCommon = candy;
+            smallestNum = num;
+        }
+    }
+
+    return leastCommon;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
