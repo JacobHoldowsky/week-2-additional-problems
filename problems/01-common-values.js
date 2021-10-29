@@ -14,7 +14,15 @@
 */
 
 function commonValues(obj1, obj2) {
-    
+    let newArr = [];
+    for ( key1 in obj1 ) {
+        let obj1Value = obj1[key1]
+        let obj2Values = Object.values(obj2)
+
+        if (obj2Values.includes(obj1Value)) newArr.push(obj1Value);
+    }
+
+    return newArr;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -14,6 +14,18 @@ All the marbles:
 */
 
 
+const allTheMarbles = (...marbleObjs) => {
+    let sumOfWeight = 0;
+    
+    for (let i = 0; i < marbleObjs.length; i++) {
+        let marbleObj = marbleObjs[i];
+        let marbleWeight = marbleObj.weight;
+        sumOfWeight += marbleWeight;
+    }
+
+    return sumOfWeight;
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
