@@ -18,7 +18,18 @@
     console.log(itemsWithinBudget(200, items2)) // prints ['omakase bento box', 'medicine']
 */
 
+const itemsWithinBudget = (budget, items) => {
+    let inBudget = [];
 
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let { name, price } = item;
+
+        if (price <= budget) inBudget.push(name)
+    }
+
+    return inBudget;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
