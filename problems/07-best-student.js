@@ -16,7 +16,22 @@
     
 */
 
+const bestStudent = (...students) => {
+    let bestStudentName = students[0];
+    let bestScore = 0;
 
+    for (let i = 0; i < students.length; i++) {
+        let student = students[i];
+        let { name, points } = student;
+
+        if (points > bestScore) {
+            bestStudentName = name;
+            bestScore = points;
+        }
+    }
+
+    return bestStudentName;
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
