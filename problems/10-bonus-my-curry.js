@@ -19,7 +19,25 @@
 */
 
 function myCurry(func, numArgs) {
+    count = 0;
+    let arr = [];
+
+    let func2 = function(arg) {
+        count++;
+        if (count < numArgs) {
+            arr.push(arg);
+            return func2
+        } else {
+            arr.push(arg)
+            return func(...arr);
+        }
+    }
+
+    return func2
 }
+
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

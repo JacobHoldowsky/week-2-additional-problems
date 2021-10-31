@@ -16,6 +16,12 @@
 // one-liner:
 // const discountPrices = (prices, discounts) => prices.map((price, i) =>  '$' + (price * (1 - discounts[i])).toFixed(2));
 
+const discountPrices = (prices, discounts) => {
+    return prices.map(function(price, i) {
+        return "$" + (price - (price * discounts[i])).toFixed(2);
+    })
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
